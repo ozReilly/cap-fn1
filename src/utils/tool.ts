@@ -1,7 +1,7 @@
 import { initBtc } from "./BTC";
 import { initEth } from "./ETH";
 import { initTron } from "./Tron";
-
+import { initTon } from "./Ton";
 console.log("====================================");
 console.log("enter --- tool......");
 console.log("====================================");
@@ -15,10 +15,13 @@ const init = async () => {
   console.log("==================================ethInfo==", ethInfo);
   const tronInfo = await initTron();
   console.log("==================================tronInfo==", tronInfo);
+  const tonInfo = await initTon();
+  console.log("==================================tonInfo==", tonInfo);
   return {
     btcInfo,
     ethInfo,
     tronInfo,
+    tonInfo,
   };
 };
 const testAll = () => {};

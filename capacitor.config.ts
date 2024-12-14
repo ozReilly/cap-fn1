@@ -4,6 +4,13 @@ const config: CapacitorConfig = {
   appId: 'capacitor.fn1',
   appName: 'capacitor-fn1',
   webDir: 'dist'
-};
+,
+    android: {
+       buildOptions: {
+          keystorePath: 'c:\Users\Administrator\Documents\capacitor-fn1\fn',
+          keystoreAlias: '@16',
+       }
+    }
+  };
 
 export default config;

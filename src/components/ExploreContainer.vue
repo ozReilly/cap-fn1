@@ -7,9 +7,9 @@
       我是测试ton的
       <hr />
       <div>
-        <ion-button @click="initInfoHandle"> init info</ion-button>
-        <br />
-        <button @click="initInfoHandle"> init info</button>
+        <ion-button @click="initInfoHandle"> init info ion-button</ion-button>
+        <!-- <br /> -->
+        <!-- <button @click="initInfoHandle"> init info button</button> -->
       </div>
       <hr />
       <div v-if="state.data?.btcInfo">
@@ -109,11 +109,11 @@ const initInfoHandle = async (params?: any) => {
 <style scoped>
 #container {
   text-align: center;
-  position: absolute;
+  /* position: absolute;
   left: 0;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
 
 #container strong {

@@ -1,19 +1,30 @@
 /// <reference types="vitest" />
 
-// import legacy from "@vitejs/plugin-legacy";
+import legacy from "@vitejs/plugin-legacy";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 import { defineConfig } from "vite";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 import wasm from "vite-plugin-wasm";
-
+// import webpack from "webpack";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     // legacy(),
-    nodePolyfills(),
     wasm(),
+    nodePolyfills({
+      // Specific modules that should not be polyfilled.
+      exclude: [],
+      // Whether to polyfill specific globals.
+      globals: {
+        Buffer: true, // can also be 'build', 'dev', or false
+        global: true,
+        process: true,
+      },
+      include: ["crypto", "buffer", "process"],
+      protocolImports: true,
+    }),
   ],
   resolve: {
     alias: {
@@ -29,5 +40,12 @@ export default defineConfig({
   },
   build: {
     target: ["esnext"], // 或者直接用 es2022 或更高
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      define: {
+        global: "globalThis",
+      },
+    },
   },
 });
