@@ -1,5 +1,5 @@
 // import * as bip39 from "bip39";
-import { TronWeb, utils } from "tronweb";
+import { TronWeb } from "tronweb";
 import * as secp256k1 from "tiny-secp256k1";
 const initTron = async () => {
   console.log("====================================");
