@@ -11,7 +11,7 @@ import wasm from "vite-plugin-wasm";
 export default defineConfig({
   plugins: [
     vue(),
-    // legacy(),
+    legacy(),
     wasm(),
     nodePolyfills({
       // Specific modules that should not be polyfilled.
@@ -31,7 +31,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
       process: "vite-plugin-node-polyfills/shims/process",
       buffer: "vite-plugin-node-polyfills/shims/buffer",
-      crypto: "vite-plugin-node-polyfills/shims/crypto",
+      // crypto: "vite-plugin-node-polyfills/shims/crypto",
+      stream: "stream-browserify",
+      crypto: "crypto-browserify",
     },
   },
   test: {

@@ -26,7 +26,7 @@ const init = async () => {
   console.log("==================================xrplInfo==", xrplInfo);
   const tonInfo = await initTon();
   console.log("==================================tonInfo==", tonInfo);
-  const NervosInfo = initNervos();
+  const NervosInfo = await initNervos();
   console.log("==================================NervosInfo==", NervosInfo);
 
   const DogecoinInfo = await initDogecoin();
@@ -38,7 +38,7 @@ const init = async () => {
   const PolkadotInfo = initPolkadot();
   console.log("==================================PolkadotInfo==", PolkadotInfo);
 
-  const CosmosInfo = initCosmos();
+  const CosmosInfo = await initCosmos();
   console.log("==================================CosmosInfo==", CosmosInfo);
 
   const KusamaInfo = initKusama();
@@ -54,7 +54,7 @@ const init = async () => {
     ethInfo,
     KusamaInfo,
     LitecoinInfo,
-    // NervosInfo,
+    NervosInfo,
     PolkadotInfo,
     TezosInfo,
     tonInfo,
