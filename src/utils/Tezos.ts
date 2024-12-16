@@ -1,8 +1,4 @@
-import * as bip39 from "bip39";
-
-import { TezosToolkit } from "@taquito/taquito";
-import { HDNode } from "@taquito/utils";
-import { InMemorySigner, importKey } from "@taquito/signer";
+import { InMemorySigner } from "@taquito/signer";
 
 // 通过助记词生成以太坊相关信息
 const initTezos = async (omnc?: string) => {
