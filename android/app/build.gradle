@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\Administrator\\Documents\\capacitor-fn1\\tffn.jks')
+            storePassword '123456'
+            keyAlias '123'
+            keyPassword '123456'
+        }
+    }
     namespace "capacitor.BGC.FN1"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
