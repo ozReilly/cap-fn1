@@ -56,6 +56,18 @@
         DogecoinInfo: {{ state.data?.DogecoinInfo }}
       </div>
 
+      <hr />
+
+      <div v-if="state.data?.KusamaInfo">
+        KusamaInfo: {{ state.data?.KusamaInfo }}
+      </div>
+
+      <hr />
+
+      <div v-if="state.data?.TezosInfo">
+        TezosInfo: {{ state.data?.TezosInfo }}
+      </div>
+
     </div>
   </div>
 </template>
@@ -159,5 +171,9 @@ const initInfoHandle = async (params?: any) => {
 
 #container a {
   text-decoration: none;
+}
+
+hr {
+  border-bottom: 1px solid #000;
 }
 </style>

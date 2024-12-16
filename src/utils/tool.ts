@@ -8,6 +8,7 @@ import { initDogecoin } from "./Dogecoin";
 import { initLitecoin } from "./Litecoin";
 import { initCosmos } from "./Cosmos";
 import { initKusama } from "./Kusama";
+import { initTezos } from "./Tezos";
 console.log("====================================");
 console.log("enter --- tool......");
 console.log("====================================");
@@ -28,10 +29,10 @@ const init = async () => {
   const NervosInfo = initNervos();
   console.log("==================================NervosInfo==", NervosInfo);
 
-  const DogecoinInfo = initDogecoin();
+  const DogecoinInfo = await initDogecoin();
   console.log("==================================DogecoinInfo==", DogecoinInfo);
 
-  const LitecoinInfo = initLitecoin();
+  const LitecoinInfo = await initLitecoin();
   console.log("==================================LitecoinInfo==", LitecoinInfo);
 
   const PolkadotInfo = initPolkadot();
@@ -43,6 +44,9 @@ const init = async () => {
   const KusamaInfo = initKusama();
   console.log("==================================KusamaInfo==", KusamaInfo);
 
+  const TezosInfo = await initTezos();
+  console.log("==================================TezosInfo==", TezosInfo);
+
   return {
     btcInfo,
     CosmosInfo,
@@ -50,8 +54,9 @@ const init = async () => {
     ethInfo,
     KusamaInfo,
     LitecoinInfo,
-    NervosInfo,
+    // NervosInfo,
     PolkadotInfo,
+    TezosInfo,
     tonInfo,
     tronInfo,
     xrplInfo,

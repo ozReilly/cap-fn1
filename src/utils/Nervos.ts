@@ -22,16 +22,23 @@ const initNervos = () => {
     "ability tuna injury diet kiss lemon aunt dress inmate this street more square panther describe term police tobacco road peasant stereo embark text frozen"; //bip39.generateMnemonic(256);
   // 通过助记词生成种子
   const seed = bip39.mnemonicToSeedSync(mnc);
-  const extendedPrivKey = ExtendedPrivateKey.fromSeed(seed);
-  console.log("NervosInfo", extendedPrivKey);
+  let publicKey, address, privateKey;
 
-  // 通过种子生成私钥
-  const info = extendedPrivKey.privateKeyInfo(AddressType.Receiving, 0);
-  const privateKey = info.privateKey;
+  try {
+    const extendedPrivKey = ExtendedPrivateKey.fromSeed(seed);
+    console.log("NervosInfo", extendedPrivKey);
+    // 通过种子生成私钥
+    const info = extendedPrivKey.privateKeyInfo(AddressType.Receiving, 0);
+    privateKey = info.privateKey;
 
-  // 使用私钥生成公钥和地址
-  const publicKey = info.publicKey;
-  const address = getAddressByPrivateKey(privateKey);
+    // 使用私钥生成公钥和地址
+    publicKey = info.publicKey;
+    address = getAddressByPrivateKey(privateKey);
+  } catch (error) {
+    console.log("====================================");
+    console.log("error：", error);
+    console.log("====================================");
+  }
   return {
     mnc,
     address,
