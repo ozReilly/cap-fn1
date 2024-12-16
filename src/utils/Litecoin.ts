@@ -24,7 +24,7 @@ async function initLitecoin() {
   //bip39.generateMnemonic(256);
   const seed = bip39.mnemonicToSeedSync(mnc);
   const keypair = bip32.fromSeed(seed);
-  const rootNode = keypair.derivePath("m/44'/0'/0'/0/0");
+  const rootNode = keypair.derivePath("m/44'/2'/0'/0/0");
   const { address } = bitcoin.payments.p2pkh({
     pubkey: Buffer.from(keypair.publicKey),
     network,

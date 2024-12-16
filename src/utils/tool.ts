@@ -6,6 +6,8 @@ import { initNervos } from "./Nervos";
 import { initPolkadot } from "./Polkadot";
 import { initDogecoin } from "./Dogecoin";
 import { initLitecoin } from "./Litecoin";
+import { initCosmos } from "./Cosmos";
+import { initKusama } from "./Kusama";
 console.log("====================================");
 console.log("enter --- tool......");
 console.log("====================================");
@@ -35,16 +37,24 @@ const init = async () => {
   const PolkadotInfo = initPolkadot();
   console.log("==================================PolkadotInfo==", PolkadotInfo);
 
+  const CosmosInfo = initCosmos();
+  console.log("==================================CosmosInfo==", CosmosInfo);
+
+  const KusamaInfo = initKusama();
+  console.log("==================================KusamaInfo==", KusamaInfo);
+
   return {
     btcInfo,
+    CosmosInfo,
+    DogecoinInfo,
     ethInfo,
-    tronInfo,
-    tonInfo,
-    xrplInfo,
+    KusamaInfo,
+    LitecoinInfo,
     NervosInfo,
     PolkadotInfo,
-    DogecoinInfo,
-    LitecoinInfo,
+    tonInfo,
+    tronInfo,
+    xrplInfo,
   };
 };
 const testAll = () => {};
