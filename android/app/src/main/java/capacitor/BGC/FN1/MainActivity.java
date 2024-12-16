@@ -1,4 +1,4 @@
-package capacitor.fn1;
+package capacitor.BGC.FN1;
 
 import com.getcapacitor.BridgeActivity;
 

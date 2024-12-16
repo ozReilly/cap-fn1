@@ -1,16 +1,17 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+/* eslint-disable no-useless-escape */
+import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'capacitor.fn1',
-  appName: 'capacitor-fn1',
-  webDir: 'dist'
-,
-    android: {
-       buildOptions: {
-          keystorePath: 'c:\Users\Administrator\Documents\capacitor-fn1\fn',
-          keystoreAlias: '@16',
-       }
-    }
-  };
+  appId: "capacitor.BGC.FN1",
+  appName: "BGC",
+  webDir: "dist",
+  android: {
+    buildOptions: {
+      keystorePath:
+        "c:\\Users\\Administrator\\Documents\\capacitor-fn1\\tffn.jks",
+      keystoreAlias: "123",
+    },
+  },
+};
 
 export default config;

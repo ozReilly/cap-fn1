@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">capacitor-fn1</string>
-    <string name="title_activity_main">capacitor-fn1</string>
-    <string name="package_name">capacitor.fn1</string>
-    <string name="custom_url_scheme">capacitor.fn1</string>
+    <string name="app_name">BGC</string>
+    <string name="title_activity_main">BGC</string>
+    <string name="package_name">capacitor.BGC.FN1</string>
+    <string name="custom_url_scheme">capacitor.BGC.FN1</string>
 </resources>
