@@ -21,8 +21,13 @@
     "@capacitor/ios": "6.2.0",
     "@capacitor/keyboard": "6.0.3",
     "@capacitor/status-bar": "6.0.2",
+    "@ckb-lumos/lumos": "^0.23.0",
+    "@cosmjs/launchpad": "^0.27.1",
     "@ionic/vue": "^8.0.0",
     "@ionic/vue-router": "^8.0.0",
+    "@polkadot/util-crypto": "^13.2.3",
+    "@taquito/signer": "^20.1.1",
+    "@taquito/taquito": "^20.1.1",
     "@ton/core": "^0.59.0",
     "@ton/crypto": "^3.3.0",
     "@ton/ton": "^15.1.0",
@@ -38,7 +43,8 @@
     "vite-plugin-node-polyfills": "^0.22.0",
     "vite-plugin-wasm": "^3.3.0",
     "vue": "^3.3.0",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.0",
+    "xrpl": "^4.0.0"
   },
   "devDependencies": {
     "@capacitor/cli": "6.2.0",

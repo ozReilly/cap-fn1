@@ -11,6 +11,7 @@
         <!-- <br /> -->
         <!-- <button @click="initInfoHandle"> init info button</button> -->
       </div>
+
       <hr />
       <div v-if="state.data?.btcInfo">
         btcInfo: {{ state.data?.btcInfo }}
@@ -19,14 +20,42 @@
       <div v-if="state.data?.ethInfo">
         ethInfo: {{ state.data?.ethInfo }}
       </div>
+
       <hr />
       <div v-if="state.data?.tonInfo">
         tonInfo: {{ state.data?.tonInfo }}
       </div>
       <hr />
+
+      <div v-if="state.data?.xrplInfo">
+        xrplInfo: {{ state.data?.xrplInfo }}
+      </div>
+      <hr />
+
       <div v-if="state.data?.tronInfo">
         tronInfo: {{ state.data?.tronInfo }}
       </div>
+      <hr />
+
+      <div v-if="state.data?.NervosInfo">
+        NervosInfo: {{ state.data?.NervosInfo }}
+      </div>
+      <hr />
+
+      <div v-if="state.data?.PolkadotInfo">
+        PolkadotInfo: {{ state.data?.PolkadotInfo }}
+      </div>
+      <hr />
+
+      <div v-if="state.data?.LitecoinInfo">
+        LitecoinInfo: {{ state.data?.LitecoinInfo }}
+      </div>
+      <hr />
+
+      <div v-if="state.data?.DogecoinInfo">
+        DogecoinInfo: {{ state.data?.DogecoinInfo }}
+      </div>
+
     </div>
   </div>
 </template>

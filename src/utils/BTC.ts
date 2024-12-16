@@ -12,7 +12,6 @@ const initBtc = async () => {
   console.log("====================================");
   console.log("initbtc----");
   console.log("====================================");
-  //   const mnc = bip39.generateMnemonic(256);
   const mnc =
     "ability tuna injury diet kiss lemon aunt dress inmate this street more square panther describe term police tobacco road peasant stereo embark text frozen";
   const seed = bip39.mnemonicToSeedSync(mnc);
